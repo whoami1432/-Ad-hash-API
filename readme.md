@@ -3,8 +3,8 @@
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/your-username/Ad-Hash-User-Management.git
-    cd Ad-Hash-User-Management
+    git clone https://github.com/whoami1432/-Ad-hash-API.git
+    cd -Ad-hash-API
     ```
 
 2. Install dependencies:
