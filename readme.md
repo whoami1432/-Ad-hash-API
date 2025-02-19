@@ -124,6 +124,10 @@
 - **Hello World**
     - `GET /api/helloworld`
 
+### Postman Collection
+
+- **Collection file name** -`ad-hash.postman_collection.json` -`Import in postman you got all the endpoint payload and details`
+
 ## Middleware
 
 - **Rate Limiter**: Limits the number of requests to prevent abuse.
