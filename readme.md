@@ -127,10 +127,19 @@
 ## Middleware
 
 - **Rate Limiter**: Limits the number of requests to prevent abuse.
-- **Error Handler**: Handles errors and sends appropriate responses.
 - **Not Found**: Handles 404 errors for undefined routes.
 - **Request Logger**: Logs details of every request.
 - **Authourize User** Once loggedin then validate the token every request
+- **Winston**: Logging library for structured application logs.
+- **UUID**: Generates unique request IDs for tracking.
+- **Compression**: Uses Gzip compression for improved performance.
+- **Helmet**: Security middleware for setting HTTP headers.
+- **CORS**: Middleware to enable Cross-Origin Resource Sharing.
+- **Body-Parser**: Middleware to parse incoming request bodies.
+- **Error Handling**: Standardized error responses for better debugging and consistency.
+- **HPP (HTTP Parameter Pollution Prevention)**: Protects against HTTP parameter pollution attacks.
+- **Request Logging**: Logs request body, params, query, and headers for debugging and auditing.
+- **Prettier**: Code formatter for maintaining a consistent code style.
 
 ## Logging
 
