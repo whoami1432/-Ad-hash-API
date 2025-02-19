@@ -1,0 +1,33 @@
+{
+	"name": "Ad-Hash-User-Management",
+	"version": "1.0.0",
+	"description": "To manage the user management system",
+	"main": "server.js",
+	"scripts": {
+		"start": "node --trace-warnings --env-file=.env server.js",
+		"dev": "nodemon --env-file=.env server.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prettify": "prettier --write *.{js,json} **/*.{js,json}",
+		"local": "nodemon --env-file=.env server.js"
+	},
+	"author": "saravanakumar<saravanakumara512@gmail.com>",
+	"license": "ISC",
+	"dependencies": {
+		"compression": "^1.8.0",
+		"cors": "^2.8.5",
+		"express": "^4.21.2",
+		"express-rate-limit": "^7.5.0",
+		"helmet": "^8.0.0",
+		"hpp": "^0.2.3",
+		"joi": "^17.13.3",
+		"jsonwebtoken": "^9.0.2",
+		"mongoose": "^8.10.1",
+		"uuid": "^11.0.5",
+		"winston": "^3.17.0",
+		"winston-daily-rotate-file": "^5.0.0"
+	},
+	"devDependencies": {
+		"nodemon": "^3.1.9",
+		"prettier": "^3.5.1"
+	}
+}
