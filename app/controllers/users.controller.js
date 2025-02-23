@@ -21,6 +21,7 @@ exports.userRegister = async (req, res, next) => {
 			email: Joi.string().email().required(),
 			mobileNumber: Joi.number().required(),
 			password: Joi.string().required(),
+			confirmPassword: Joi.string().required(),
 			country: Joi.string().required(),
 			city: Joi.string().required(),
 			state: Joi.string().required(),
@@ -132,24 +133,4 @@ exports.userLogin = async (req, res, next) => {
 	} catch (error) {
 		next(error);
 	}
-};
-
-exports.authourize = async (req, res, next) => {
-	logger.info({ requestId: req.id, message: `Token Validation` });
-	const token = req.header('Auth-Token');
-	if (!token) {
-		logger.info({ requestId: req.id, message: `Token not found` });
-		return res.status(401).json({ error: 'Access Denied' });
-	}
-
-	jwt.verify(token, secretKeyEnv, (err, user) => {
-		if (err) {
-			logger.info({ requestId: req.id, message: `Token verify error` });
-
-			return res.status(403).json({ error: 'Invalid token' });
-		}
-		logger.info({ requestId: req.id, message: `Token is valid` });
-		req.user = user;
-		next();
-	});
 };
